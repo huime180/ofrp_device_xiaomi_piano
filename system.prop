@@ -1,0 +1,12 @@
+#
+# system.prop for Xiaomi Pad 8 Pro (piano)
+#
+
+# Radio
+ro.telephony.default_network=33,33
+
+# Graphics
+ro.sf.lcd_density=440
+
+# USB
+persist.vendor.usb.config=mtp
