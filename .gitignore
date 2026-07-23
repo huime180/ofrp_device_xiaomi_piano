@@ -1,5 +1,2 @@
-*.pyc
-*.swp
-*.swo
-*~
-.DS_Store
+recovery/root/twres/splash.xml
+

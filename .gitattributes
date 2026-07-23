@@ -1,7 +1,2 @@
-* text=auto eol=lf
-*.mk text eol=lf
-*.rc text eol=lf
-*.bp text eol=lf
-*.fstab text eol=lf
-*.prop text eol=lf
-*.sh text eol=lf
+# Auto detect text files and perform LF normalization
+* text=auto
