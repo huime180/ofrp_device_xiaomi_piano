@@ -18,5 +18,10 @@ PRODUCT_NAME := twrp_piano
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Theme
+# Theme - Piano (Pad 8 Pro) UI adjustments
 TW_STATUS_ICONS_ALIGN := center
+TW_ROTATION := 270
+TW_X_OFFSET := 280
+TW_W_OFFSET := -560
+TW_DEFAULT_LANGUAGE := zh_CN
+TW_NO_HAPTICS := true
