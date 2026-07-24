@@ -6,7 +6,7 @@ on:
       DEVICE_TREE_URL:
         description: "Device tree url"
         required: true
-        default: "https://github.com/adontoo/device_xiaomi_sm8750_OFRP"
+        default: "https://github.com/huime180/ofrp_device_xiaomi_piano"
       DEVICE_TREE_BRANCH:
         description: "Device tree branch"
         required: true
@@ -14,11 +14,11 @@ on:
       DEVICE_PATH:
         description: "Device path device/"
         required: true
-        default: "xiaomi/sm8750_thales"
+        default: "xiaomi/piano"
       DEVICE_NAME:
         description: "Device name"
         required: true
-        default: "sm8750_thales"
+        default: "piano"
       LUNCH_TARGET:
         description: "lunch twrp_ (default same as device name)"
         required: false
@@ -103,16 +103,6 @@ jobs:
     - name: Setup device
       run: |
         git clone ${{ github.event.inputs.DEVICE_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} device/${{ github.event.inputs.DEVICE_PATH }}
-
-    - name: Apply patches
-      run: |
-        WORKINGDIR=$(pwd)
-        cd $WORKINGDIR/bootable/recovery
-        git apply $WORKINGDIR/device/${{ github.event.inputs.DEVICE_PATH }}/patches/*.patch
-        cd $WORKINGDIR
-        git clone https://github.com/adontoo/android_external_libmicrohttpd -b ofox-14.1 external/libmicrohttpd
-        rm -rf bionic
-        git clone https://github.com/adontoo/OrangeFox-android_platform_bionic bionic
 
     - name: Generate build info
       run: |
